@@ -38,8 +38,8 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
       - name: SSH远程连接服务器配置固件
-      uses: P3TERX/debugger-action@main
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+        uses: P3TERX/debugger-action@main
+        if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
       - name: Update feeds
         run: |
